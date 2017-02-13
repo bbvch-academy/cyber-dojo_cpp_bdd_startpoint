@@ -1,0 +1,28 @@
+
+{
+  "visible_filenames": [
+    "hiker.tests.cpp",
+    "hiker.cpp",
+    "hiker.hpp",
+    "main.cpp",
+    "makefile",
+    "cyber-dojo.sh"
+  ],
+
+  "filename_extension" : ".cpp",
+
+  "display_name": "C++ (g++), Igloo WhenThen",
+
+  "image_name": "cyberdojofoundation/gpp_igloo",
+
+  "red_amber_green" : [
+    "lambda { |output|",
+    "  igloo_pattern =  /Test run complete. (\\d+) tests run, (\\d+) succeeded, (\\d+) failed./",
+    "  if match = igloo_pattern.match(output)",
+    "    match[3] == '0' ? :green : :red",
+    "  else",
+    "   :amber",
+    "  end",
+    "}"
+  ]
+}
