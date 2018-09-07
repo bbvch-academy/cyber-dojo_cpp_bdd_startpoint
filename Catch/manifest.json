@@ -12,13 +12,5 @@
 
   "display_name": "C++ (g++), Catch",
 
-  "image_name": "cyberdojofoundation/gpp_catch",
-
-  "red_amber_green" : [
-    "lambda { |output|",
-    "  return :red   if /failed \\(\\d* assertion/.match(output)",
-    "  return :green if /All tests passed/.match(output)",
-    "  return :amber",
-    "}"
-  ]
+  "image_name": "cyberdojofoundation/gplusplus-catch"
 }
