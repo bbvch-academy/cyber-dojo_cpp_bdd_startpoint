@@ -12,5 +12,7 @@
 
   "display_name": "C++ (g++), Catch",
 
-  "image_name": "cyberdojofoundation/gplusplus-catch"
+  "image_name": "cyberdojofoundation/gplusplus-catch",
+
+  "runner_choice": "stateless"
 }

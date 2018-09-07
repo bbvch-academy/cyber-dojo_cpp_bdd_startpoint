@@ -13,6 +13,8 @@
 
   "display_name": "C++ (g++), Igloo Describe",
 
-  "image_name": "cyberdojofoundation/gplusplus-igloo"
+  "image_name": "cyberdojofoundation/gplusplus-igloo",
+
+  "runner_choice": "stateless"
 
 }

@@ -15,5 +15,7 @@
 
   "image_name": "cyberdojofoundation/gpp_igloo",
 
-  "image_name": "cyberdojofoundation/gplusplus-igloo"
+  "image_name": "cyberdojofoundation/gplusplus-igloo",
+
+  "runner_choice": "stateless"
 }
