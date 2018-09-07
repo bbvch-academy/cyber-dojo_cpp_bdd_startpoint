@@ -16,3 +16,5 @@ RUN mkdir build && (cd build && cmake -DCUKE_DISABLE_QT=on -DCUKE_ENABLE_EXAMPLE
 RUN cmake --build build --target install
 
 COPY red_amber_green.rb /usr/local/bin
+WORKDIR /
+RUN rm -rf cucumber-cpp
