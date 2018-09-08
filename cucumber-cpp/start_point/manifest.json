@@ -11,7 +11,7 @@
     "features/hiker.feature",
     "hiker_steps.cpp"
   ],
-  "image_name": "meshell/cucumber-cpp",
+  "image_name": "meshell/gpp-8_cucumber-cpp_gtest",
   "filename_extension": [
     ".cpp",
     ".feature"
