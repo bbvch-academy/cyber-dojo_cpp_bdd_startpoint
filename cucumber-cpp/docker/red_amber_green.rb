@@ -1,7 +1,7 @@
 lambda { |stdout,stderr,status|
   output = stdout + stderr
 
-  return :amber if /make: *** \[test\] Error/.match(output)
+  return :amber if /Error/.match(output)
   return :amber if /SyntaxError/.match(output)
   return :amber if /NameError/.match(output)
   return :amber if /^[.\-UAPF]*U[.\-UAPF]*$/.match(output)
