@@ -1,4 +1,4 @@
-FROM  gcc:latest
+FROM  gcc:8.2.0
 LABEL maintainer=estermann.michel@gmail.com
 
 RUN apt-get update && apt-get upgrade -y
