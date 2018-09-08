@@ -3,13 +3,13 @@
   "visible_filenames": [
     "features/hiker.feature",
     "features/step_definitions/cucumber.wire",
-    "hiker_steps.cpp",
+    "features/step_definitions/hiker_steps.cpp",
     "cyber-dojo.sh",
     "makefile"
   ],
   "highlight_filenames": [
     "features/hiker.feature",
-    "hiker_steps.cpp"
+    "features/step_definitions/hiker_steps.cpp"
   ],
   "image_name": "meshell/gpp-8_cucumber-cpp_gtest",
   "filename_extension": [

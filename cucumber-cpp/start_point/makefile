@@ -10,13 +10,14 @@ CUCUMBER_LIB = -lcucumber-cpp
 HPP_FILES = $(wildcard *.hpp)
 COMPILED_HPP_FILES = $(patsubst %.hpp,%.compiled_hpp,$(HPP_FILES))
 CPP_FILES = $(wildcard *.cpp)
+CPP_STEP_FILES = $(wildcard features/step_definitions/*.cpp)
 
 .PHONY: test.output
 test.output: test makefile
 	@./$< > /dev/null &
 
-test: makefile $(CPP_FILES) $(COMPILED_HPP_FILES)
-	@$(CXX) $(CXXFLAGS) -O $(CPP_FILES) $(GTEST_LIBS) $(BOOST_LIBS) $(CUCUMBER_LIB) -o $@
+test: makefile $(CPP_FILES) $(CPP_STEP_FILES) $(COMPILED_HPP_FILES)
+	@$(CXX) $(CXXFLAGS) -O $(CPP_FILES) $(CPP_STEP_FILES) $(GTEST_LIBS) $(BOOST_LIBS) $(CUCUMBER_LIB) -o $@
 
 # This rule ensures header files build in their own right.
 # The quality of header files is important because header files
