@@ -1,23 +1,22 @@
 CXXFLAGS += -I.
 CXXFLAGS += -std=c++17
 CXXFLAGS += -Wall -Wextra -Werror
-CXXFLAGS += -DBOOST_TEST_DYN_LINK
 CXXFLAGS += -fprofile-arcs -ftest-coverage
 
-BOOST_LIB = -llibboost_thread -llibboost_system -llibboost_regex -llibboost_date_time -llibboost_program_options -llibboost_filesystem
+GTEST_LIBS = -lgtest -lgtest_main -pthread
+BOOST_LIBS = -llibboost_thread -llibboost_system -llibboost_regex -llibboost_date_time -llibboost_program_options -llibboost_filesystem
 CUCUMBER_LIB = -llibcucumber-cpp
 
 HPP_FILES = $(wildcard *.hpp)
 COMPILED_HPP_FILES = $(patsubst %.hpp,%.compiled_hpp,$(HPP_FILES))
 CPP_FILES = $(wildcard *.cpp)
 
-
 .PHONY: test.output
 test.output: test makefile
 	@./$< >/dev/null &
 
 test: makefile $(CPP_FILES) $(COMPILED_HPP_FILES)
-	@$(CXX) $(CXXFLAGS) -O $(CPP_FILES) $(BOOST_LIB) -o $@
+	@$(CXX) $(CXXFLAGS) -O $(CPP_FILES) $(GTEST_LIBS) $(BOOST_LIBS) $(CUCUMBER_LIB) -o $@
 
 # This rule ensures header files build in their own right.
 # The quality of header files is important because header files
