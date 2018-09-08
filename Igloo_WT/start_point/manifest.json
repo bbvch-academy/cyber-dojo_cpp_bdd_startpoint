@@ -1,5 +1,6 @@
-
 {
+  "display_name": "C++ (g++), Igloo When Then",
+
   "visible_filenames": [
     "hiker.tests.cpp",
     "hiker.cpp",
@@ -9,13 +10,11 @@
     "cyber-dojo.sh"
   ],
 
-  "filename_extension" : ".cpp",
-
-  "display_name": "C++ (g++), Igloo WhenThen",
+  "hidden_filenames": [ ".*\\.gcov" ],
 
   "image_name": "cyberdojofoundation/gpp_igloo",
 
-  "image_name": "cyberdojofoundation/gplusplus-igloo",
+  "filename_extension": [ ".cpp", ".hpp" ],
 
   "runner_choice": "stateless"
 }
