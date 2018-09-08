@@ -3,9 +3,9 @@ CXXFLAGS += -std=c++17
 CXXFLAGS += -Wall -Wextra -Werror
 CXXFLAGS += -fprofile-arcs -ftest-coverage
 
-GTEST_LIBS = -lgtest -lgtest_main -pthread
-BOOST_LIBS = -llibboost_thread -llibboost_system -llibboost_regex -llibboost_date_time -llibboost_program_options -llibboost_filesystem
-CUCUMBER_LIB = -llibcucumber-cpp
+GTEST_LIBS = -lgtest -pthread
+BOOST_LIBS = -lboost_thread -lboost_system -lboost_regex -lboost_date_time -lboost_program_options -lboost_filesystem
+CUCUMBER_LIB = -lcucumber-cpp
 
 HPP_FILES = $(wildcard *.hpp)
 COMPILED_HPP_FILES = $(patsubst %.hpp,%.compiled_hpp,$(HPP_FILES))
@@ -13,7 +13,7 @@ CPP_FILES = $(wildcard *.cpp)
 
 .PHONY: test.output
 test.output: test makefile
-	@./$< >/dev/null &
+	@./$< > /dev/null &
 
 test: makefile $(CPP_FILES) $(COMPILED_HPP_FILES)
 	@$(CXX) $(CXXFLAGS) -O $(CPP_FILES) $(GTEST_LIBS) $(BOOST_LIBS) $(CUCUMBER_LIB) -o $@
