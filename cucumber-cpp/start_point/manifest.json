@@ -16,6 +16,7 @@
     ".cpp",
     ".feature"
   ],
-  "tab_size": 2,
+  "tab_size": 4,
+  "max_seconds": 20,
   "runner_choice": "stateless"
 }
