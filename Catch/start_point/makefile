@@ -10,7 +10,7 @@ OBJ_FILES = $(patsubst %.cpp,%.o,$(CPP_FILES))
 
 .PHONY: test.output
 test.output: test makefile
-	@./$<
+	@./$< -s
 
 test: makefile $(OBJ_FILES) $(COMPILED_HPP_FILES)
 	@$(CXX) $(CXXFLAGS) -O $(OBJ_FILES) -o $@
